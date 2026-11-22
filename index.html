@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Portfolio Website</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="./index.css">
+
+	<script>
+	  document.addEventListener("DOMContentLoaded", () => {
+	    const targets = {
+	      Home: ".hero",
+	      Project: "#projects, .projects",
+	      Contact: "#contacts, .contacts, .contact, footer"
+	    };
+
+	    const navLinks = document.querySelectorAll(".navlinks a");
+
+	    navLinks.forEach((link) => {
+	      link.addEventListener("click", (event) => {
+	        event.preventDefault();
+	        const label = link.textContent.trim();
+	        const selector = targets[label] || link.getAttribute("href");
+	        const destination = document.querySelector(selector);
+
+	        if (destination) {
+	          destination.scrollIntoView({ behavior: "smooth", block: "start" });
+	        }
+	      });
+	    });
+
+	    const logo = document.querySelector(".hero-header .logo");
+	    const heroSection = document.querySelector(".hero");
+
+	    if (logo && heroSection) {
+	      logo.style.cursor = "pointer";
+	      logo.addEventListener("click", () => {
+	        heroSection.scrollIntoView({ behavior: "smooth", block: "start" });
+	      });
+	    }
+	  });
+	</script>
+</head>
+<body>
+
+	<!-- Hero Section -->
+	<section class="hero">
+		<header class="hero-header">
+			<h4 class="logo">KRIS</h4>
+			
+			<nav class="navlinks">
+				<a href="#hero">Home</a>
+				<a href="#projects">Project</a>
+				<a href="#contacts">Contact</a>
+			</nav>
+		</header>
+
+		<div class="hero-bg-wrapper">
+			<img src="./images/JK.png" alt="background text">
+		</div>
+
+		<div class="hero-content">
+			<h3 class="hero-subtitle">WELCOME TO MY UI/UX</h3>
+			<h1 class="hero-title">PORTFOLIO</h1>
+			<p class="hero-intro">Hello! I am Kris, a UI Designer based in the philippines</p>
+			<p class="hero-description">I’m a UI/UX Designer with 2 years of experience creating intuitive and purposeful digital experiences for mobile and web. I enjoy turning ideas and user needs into clean, thoughtful designs that balance usability with visual appeal.</p>
+
+			<!-- CTA Button -->
+			<div class="hero-actions">
+				<a href="#projects" class="btn-primary">Explore Featured Projects</a>
+
+				<a href="./assets/John Kristianne Tabile_UIUX_Resume_2026.pdf" download="John Kristianne Tabile_UIUX_Resume_2026.pdf" class="btn-secondary">Download CV / Resume</a>
+			</div>	
+		</div>
+
+		<!-- Skills -->
+		<div class="skills-section">
+			<p class="skills-label">SPECIALIZED STACK | CORE TECHNOLOGIES</p>
+			<div class="skills-list">
+				<span class="skills-badge">Figma</span>
+				<span class="skills-badge">HTML</span>
+				<span class="skills-badge">CSS</span>
+				<span class="skills-badge">Bootstrap</span>
+				<span class="skills-badge">Javascript</span>
+				<span class="skills-badge">Git</span>
+				<span class="skills-badge">Github</span>
+			</div>					
+		</div>
+
+
+		<div class="hero-footer">
+			<div class="green-bar"></div>
+			<h6 class="portfolio-year">PORTFOLIO 2026</h6>
+		</div>
+	</section>
+
+	<!-- Carousel -->
+	<section class="stats-carousel">
+		<div class="stats-container">
+			<div class="stats-grid">
+				<div class="stat-item">
+					<span class="stat-number">2+</span>
+					<span class="stat-year">Years Experience</span>
+				</div>
+				<div class="stat-item">
+					<span class="stat-number">10+</span>
+					<span class="stat-text">Usability Tested Screens</span>
+				</div>
+				<div class="stat-item">
+					<span class="stat-number">10+</span>
+					<span class="stat-text">User Research Participants</span>
+				</div>
+				<div class="stat-item">
+					<span class="stat-number">100%</span>
+					<span class="stat-text">Design-to-Dev handoff ready</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Project Section -->
+	<section id="projects" class="projects-section">
+		<div class="projects-container">
+			<div class="projects-header">
+				<div class="projects-title-group">
+					<p class="projects-eyebrow">SELECTED WORKS</p>
+					<h1 class="projects-title">featured projects & case studies</h1>
+				</div>
+				<p class="projects-intro">A deep-dive selection of recent production systems, generative AI interfaces, and performant web products.</p>
+			</div>
+			<figure class="project-card">
+				<div class="project-media">
+					<img src="./images/Cover.png" alt="fitora" class="project-img">
+				</div>
+				<figcaption class="project-caption">
+					<h3 class="project-name">FITORA</h3>
+					<p class="project-desc">A mobile fitness application designed to help users build healthier habits through personalized workout plans, nutrition tracking, and daily progress monitoring.</p>
+					<a href="https://www.figma.com/proto/fqkwi0ALSAbdKcsyXQc1JR/FITORA_Case-Study_Presentation?node-id=8-488&viewport=301%2C179%2C0.07&t=k3gEiWMxSXlRRMpD-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1" class="project-btn"target="_blank" rel="noopener noreferrer">View Case Study</a>
+				</figcaption>
+			</figure>
+
+			<figure class="project-card">
+				<div class="project-media">
+					<img src="./images/price.png" alt="priceloq" class="project-img">
+				</div>
+				<figcaption class="project-caption">
+					<h3 class="project-name">PRICELOQ</h3>
+					<p class="project-desc">A mobile fitness application designed to help users build healthier habits through personalized workout plans, nutrition tracking, and daily progress monitoring.</p>
+					<a href="https://www.figma.com/proto/ThhSSYIYI7JGYU9LYFLDBe/Case-Study-PriceLocq?node-id=144-39&viewport=485%2C255%2C0.02&t=qVxoVvdD9fRb2cIt-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1" class="project-btn" target="_blank" rel="noopener noreferrer">View Case Study</a>
+				</figcaption>
+			</figure>
+
+			<figure class="project-card">
+				<div class="project-media">
+					<img src="./images/real-estate.png" alt="priceloq" class="project-img">
+				</div>
+				<figcaption class="project-caption">
+					<h3 class="project-name">REAL-ESTATE WEBSITE</h3>
+					<p class="project-desc">A mobile fitness application designed to help users build healthier habits through personalized workout plans, nutrition tracking, and daily progress monitoring.</p>
+					<a href="https://www.figma.com/proto/nsShEkB6pbEi6WqxSytymk/Project_Portfolio_2026?node-id=112-11895&viewport=391%2C-4358%2C0.17&t=X6bYwSuu4X6B1vKb-1&scaling=min-zoom&content-scaling=fixed&page-id=112%3A7" class="project-btn" target="_blank" rel="noopener noreferrer">View Project</a>
+				</figcaption>
+			</figure>
+		</div>
+	</section>
+
+	<!-- Contacts Section -->
+<!-- 	<section id="contacts" class="contacts-section">
+		<div class="contacts-container">
+			<div class="contacts-layout">
+				<div class="contacts-info">
+					<div class="contacts-header">
+						<p class="contact-eyebrow">GET IN TOUCH / INQUIRIES</p>
+						<h1 class="contact-title">Let's build something enduring together.</h1>
+						<p class="contacts-description">Available for select freelance engagements, design system architecture, and design engineering leadership. Let's discuss your timeline, challenges, and goals.</p>
+					</div>
+
+					<div class="verified-profiles">
+							<p class="verified-label">VERIFIED PROFILES</p>
+						<div class="profile-links">
+							<a href="#" class="profile-badge">GitHub</a>
+							<a href="#" class="profile-badge">Behance</a>
+							<a href="#" class="profile-badge">LinkedIn</a>
+							<a href="#" class="profile-badge">Facebook</a>
+						</div>	
+					</div>
+				</div>
+					
+				<form class="contact-form-card" action="#" method="post">
+					<div class="form-grid">
+						<div class="form-group">
+							<label for="client-name" class="form-label">YOUR NAME</label>
+							<input type="text" id="client-name" name="name" class="form-input" placeholder="Ex. John Doe" required>
+						</div>
+
+						<div class="form-group">
+							<label for="working-email" class="form-label">WORKING EMAIL</label>
+							<input type="text" id="working-email" name="email" class="form-input" placeholder="Enter your email" required>
+						</div>
+
+						<div class="form-group">
+							<label for="project-type" class="form-label">PROJECT TYPE</label>
+							<input type="text" id="project-type" name="project" class="form-input" placeholder="Ex. Websites & Landing Pages" required>
+						</div>
+
+						<div class="form-group">
+							<label for="schedule-meeting" class="form-label">SCHEDULE MEETING</label>
+							<input type="date" id="schedule-meeting" name="schedule" class="form-input" required>
+						</div>
+					</div>
+
+					<div class="form-group form-group-full">
+						<label for="notes" class="form-label">TELL ME ABOUT YOUR PROJECT</label>
+						<textarea name="notes" id="notes" rows="5" class="form-textarea" placeholder="Enter your text here"></textarea>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section> -->
+
+	<!-- Footer Section -->
+	<footer id="footer" class="footer-section">
+		<div class="footer-container">
+			<div class="footer-card">
+				<div class="footer-brand-col">
+					<h5 class="footer-logo">KRIS</h5>
+					<p class="footer-newsletter-text">Stay updated on new case studies, projects, and dev builds.</p>
+
+					<form class="newsletter-form">
+						<label for="newsletter-email" class="visually-hidden">EMAIL ADDRESS</label>
+						<input type="email" id="newsletter-email" name="email" placeholder="Enter your email" class="newsletter-input" required>
+						<button type="submit" class="newsletter-btn">Subscribe</button>
+					</form>
+
+					<p class="footer-consent">By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.</p>
+				</div>
+
+				<div class="footer-links-grid">
+					<nav class="footer-col" aria-label="Footer Navigation">
+						<h6 class="footer-heading">Navigation</h6>
+						<ul class="footer-list">
+							<li><a href="#projects" class="footer-link">Work</a></li>
+							<li><a href="#about" class="footer-link">About</a></li>
+							<li><a href="./assets/John Kristianne Tabile_UIUX_Resume_2026.pdf" download="John Kristianne Tabile_UIUX_Resume_2026.pdf" class="footer-link">Resume / CV</a></li>
+							<li><a href="#contacts" class="footer-link">Contacts</a></li>
+						</ul>
+					</nav>
+
+					<nav class="footer-col" aria-lable="Connect Links">
+						<h6 class="footer-heading">Connect</h6>
+						<ul class="footer-list">
+							<li><a href="#" class="footer-link">Behance</a></li>
+							<li><a href="#" class="footer-link">GitHub</a></li>
+							<li><a href="#" class="footer-link">LinkedIn</a></li>
+						</ul>
+					</nav>
+
+
+					<nav class="footer-col" aria-lable="Social Links">
+						<h6 class="footer-heading">Follow Us</h6>
+						<ul class="footer-list">
+							<li><a href="#" class="footer-link">Facebook</a></li>
+							<li><a href="#" class="footer-link">Instagram</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				<p class="footer-copyright">&copy; 2026. All rights reserved</p>
+				<div class="footer-legal">
+					<a href="#" class="footer-legal-link">Privacy Policy</a>
+					<a href="#" class="footer-legal-link">Terms of Service</a>
+					<a href="#" class="footer-legal-link">Cookies Settings</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<script src="./index.js"></script>
+
+	<script>
+	  document.addEventListener("DOMContentLoaded", () => {
+	    const resumeBtn = document.querySelector(".hero-actions .btn-secondary");
+
+	    if (resumeBtn) {
+	      resumeBtn.addEventListener("click", async (event) => {
+	        event.preventDefault();
+
+	        const fileUrl = resumeBtn.getAttribute("href");
+	        const fileName = resumeBtn.getAttribute("download") || "John_Kristianne_Tabile_UIUX_Resume_2026.pdf";
+
+	        try {
+	          const response = await fetch(fileUrl);
+	          if (!response.ok) throw new Error("File not found");
+
+	          const blob = await response.blob();
+	          const blobUrl = URL.createObjectURL(blob);
+
+	          const tempLink = document.createElement("a");
+	          tempLink.href = blobUrl;
+	          tempLink.download = fileName;
+	          document.body.appendChild(tempLink);
+	          tempLink.click();
+	          document.body.removeChild(tempLink);
+
+	          URL.revokeObjectURL(blobUrl);
+	        } catch (error) {
+	          // Fallback if opened via raw file:// protocol without a local server
+	          const fallbackLink = document.createElement("a");
+	          fallbackLink.href = fileUrl;
+	          fallbackLink.download = fileName;
+	          fallbackLink.click();
+	        }
+	      });
+	    }
+	  });
+	</script>
+</body>
+</html>
