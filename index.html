@@ -57,11 +57,17 @@
 		<header class="hero-header">
 			<h4 class="logo">KRIS</h4>
 			
-			<nav class="navlinks">
+			<nav class="navlinks" id="navLinks">
 				<a href="#hero">Home</a>
 				<a href="#projects">Project</a>
 				<a href="#contacts">Contact</a>
 			</nav>
+
+			<button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Nav Menu" aria-expanded="false" aria-controls="navlinks">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
 		</header>
 
 		<div class="hero-bg-wrapper">
@@ -287,6 +293,7 @@
 
 
 	<script src="./index.js"></script>
+	<script src="./script.js" defer></script>
 
 	<script>
 	  document.addEventListener("DOMContentLoaded", () => {
